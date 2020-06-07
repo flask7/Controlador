@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Seleccione el grupo de dispositivos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-item id="ip">
+		<ion-input placeholder="Ingrese dirección IP del controlador" type="text"[(ngModel)]="ip"></ion-input>
+		<ion-button (click)="validarIp()" slot="icon-only" slot="end">
+			<ion-icon name="search-outline"></ion-icon>
+		</ion-button>
+	</ion-item>
+	<ion-row id="fila">
+		<ion-col>
+			<ion-button color="warning" size="large" expand="full" routerLink="/lamparas" disabled="{{dl}}">
+				<ion-icon name="bulb-outline"></ion-icon>
+				Lámparas
+			</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button color="secondary" size="large" expand="full" routerLink="/persianas" disabled="{{dp}}">
+				<ion-icon name="grid-outline"></ion-icon>
+				Persianas
+			</ion-button>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col>
+			<ion-button size="large" expand="full" routerLink="/aires" disabled="{{da}}">
+				<ion-icon name="snow-outline"></ion-icon>
+				Aires acondicionados
+			</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button color="success" size="large" expand="full" routerLink="/ventiladores" disabled="{{dv}}">
+				<ion-icon name="leaf-outline"></ion-icon>
+				Ventiladores
+			</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-content>

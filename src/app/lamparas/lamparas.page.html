@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">Lámparas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list *ngFor="let lampara of lamparas">
+		<ion-item id="nlamp">
+			<p>Lámpara {{ lampara.name }}</p>
+			<ion-button slot="end" color="medium">
+				<ion-icon name="sunny-outline"></ion-icon>
+			</ion-button>
+		</ion-item>
+	</ion-list>
+</ion-content>
